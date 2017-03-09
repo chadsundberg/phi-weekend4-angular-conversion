@@ -36,10 +36,30 @@ function addTask(newTask) {
 });
 }
 
+function deleteTask(taskId){
+$http({
+  method: 'DELETE',
+  url: '/tasks/' + taskId
+}).then(function(response) {
+  getTasks();
+});
+}
+
+function uncompleteTask(taskId){
+  $http({
+    method: 'PUT',
+    url: '/tasks/uncomplete/' + taskId
+  }).then(function(response) {
+    getTasks();
+  });
+}
+
   return {
     allTasks: factoryTasks,
     updateTasks: getTasks,
     completeTask: completeTask,
-    addTask: addTask
+    addTask: addTask,
+    deleteTask: deleteTask,
+    uncompleteTask: uncompleteTask
   };
 }]);

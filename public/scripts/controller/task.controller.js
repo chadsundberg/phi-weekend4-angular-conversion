@@ -26,12 +26,7 @@ myApp.controller('TaskController', ['$http', 'TaskFactory', function($http, Task
   }
 
   self.deleteTask = function(taskId) {
-    $http({
-      method: 'DELETE',
-      url: '/tasks/' + taskId
-    }).then(function(response) {
-      TaskFactory.updateTasks();
-    });
+    TaskFactory.deleteTask(taskId);
   }
 
 
@@ -44,12 +39,7 @@ myApp.controller('TaskController', ['$http', 'TaskFactory', function($http, Task
   }
 
   self.uncompleteTask = function(taskId) {
-    $http({
-      method: 'PUT',
-      url: '/tasks/uncomplete/' + taskId
-    }).then(function(response) {
-      TaskFactory.updateTasks();
-    });
+    TaskFactory.uncompleteTask(taskId);
   }
 
 
