@@ -1,5 +1,5 @@
-myApp.controller('HomeController', function(){
+myApp.controller('HomeController', ['TaskFactory', function(TaskFactory){
   console.log('home controller was loaded');
   var self = this;
-  self.specialMessage = 'This site is amazing!!';
-});
+  self.someMessage = 'This site is amazing!!';
+}]);

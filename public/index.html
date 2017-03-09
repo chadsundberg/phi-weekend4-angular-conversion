@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title> Weekend 4 Live Solve</title>
-    <script src="vendors/angular.min.js" charset="utf-8"></script>
-    <script src="vendors/angular-route.min.js" charset="utf-8"></script>
-    <link href="vendors/bootstrap.min.css">
-
-    <!-- <script src="vendors/bootstrap.min.js" charset="utf-8"></script> -->
-      <script src="scripts/client.js" charset="utf-8"></script>
-
-    <script src="scripts/controller/home.controller.js" charset="utf-8"></script>
-    <script src="scripts/controller/task.controller.js" charset="utf-8"></script>
-    <script src="scripts/controller/about.controller.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="styles/style.css">
-  </head>
-  <body ng-app="TaskApp" ng-controller="TaskController as tc">
-    <header class="ju" ng-include="'/views/templates/header.html'"></header>
-    <nav ng-include="'/views/templates/nav.html'"></nav>
-    <main ng-view></main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title> Weekend 4 Live Solve</title>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <script src="scripts/factories/task.factory.js" charset="utf-8"></script>
+  <script src="scripts/controller/home.controller.js" charset="utf-8"></script>
+  <script src="scripts/controller/task.controller.js" charset="utf-8"></script>
+  <script src="scripts/controller/about.controller.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body ng-app="TaskApp">
+  <header class="jumbotron text-center" ng-include="'/views/templates/header.html'"></header>
+  <nav ng-include="'/views/templates/nav.html'"></nav>
+  <main ng-view></main>
+</body>
 </html>

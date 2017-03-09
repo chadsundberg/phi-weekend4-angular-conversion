@@ -1,6 +1,6 @@
 myApp.controller('AboutController', function(){
   var self = this;
-  self.people = [
+  self.listOfPeople = [
    {
      "firstName": "Melissa E",
      "lastName": "Hare",
